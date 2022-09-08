@@ -17,6 +17,5 @@ def test_positive(configure_size_window_browser):
 
 def test_negative():
     browser.open('https://google.com')
-    browser.element('[name=q]').should(be.blank).type('selene').press_enter()
-    browser.element('[id=search]').should(have.no.text('Selene: User-oriented Web UI browser tests in Python'))
-
+    browser.element('[name=q]').should(be.blank).type('fyfyufyfhghjhkjlkl;lmnbhghjtuy').press_enter()
+    browser.element('[id=res]').should(have.text('По запросу fyfyufyfhghjhkjlkl;lmnbhghjtuy ничего не найдено.'))
